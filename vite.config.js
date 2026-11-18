@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// base = nombre del repo, necesario para GitHub Pages (https://nadulog.github.io/landing-mendoza-/)
+// Por defecto la web se sirve desde la raíz (Netlify, Vercel, dominio propio).
+// El workflow de GitHub Pages define BASE_PATH=/landing-mendoza-/ al compilar.
 export default defineConfig({
   plugins: [react()],
-  base: '/landing-mendoza-/',
+  base: process.env.BASE_PATH || '/',
 })
