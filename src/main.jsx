@@ -5,7 +5,7 @@ import Paused from './components/Paused.jsx'
 import './index.css'
 
 // Para reactivar la landing, cambiar a false y volver a publicar.
-const SITE_PAUSED = true
+const SITE_PAUSED = false
 
 if (SITE_PAUSED) {
   const robots = document.createElement('meta')
